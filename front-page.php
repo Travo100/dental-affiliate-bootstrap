@@ -1,6 +1,6 @@
     <?php get_header(); ?>
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="background-image: url(<?php echo header_image(); ?>)">
+    <div class="jumbotron" style="background-image: url(<?php echo header_image(); ?>); background-size: cover;">
       <!-- <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /> -->
       <div class="container">
         
