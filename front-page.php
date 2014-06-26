@@ -26,6 +26,28 @@
            <?php if ( dynamic_sidebar ( 'front-right') ); ?>
         </div>
       </div>
+     </div> 
+
+    <div class="wrapper" style="width: 100%; border-top: 10px solid #000; border-bottom: 10px solid #000;">
+    <div class="container">
+      <?php
+          $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
+
+          foreach( $mypages as $page ) {    
+            $content = $page->post_content;
+              if ( ! $content ) // Check for empty page
+              continue;
+
+          $content = apply_filters( 'the_content', $content );
+        ?>
+        <h2><?php echo $page->post_title; ?></a></h2>
+        <div class="entry"><?php echo $content; ?></div>
+    <?php
+      } 
+    ?> 
+
+      </div>
+    </div>    
       <?php get_footer(); ?>
 
      
