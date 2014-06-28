@@ -28,10 +28,9 @@
       </div>
      </div> 
 
-    <div class="wrapper" style="width: 100%; border-top: 10px solid #000; border-bottom: 10px solid #000;">
-      <div class="container">
+  
       <?php
-          $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
+          $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC', 'post_type' => 'page' ) );
 
           foreach( $mypages as $page ) {    
             $content = $page->post_content;
@@ -40,33 +39,19 @@
 
           $content = apply_filters( 'the_content', $content );
         ?>
+      <div class="wrapper" style="width: 100%; border-top: 10px solid #000;"> 
+      <div class="container">
         <h2><?php echo $page->post_title; ?></a></h2>
-        <div class="entry"><?php echo $content; ?></div>
+
+        <div class="entry"><?php echo $content; ?></div> <!-- end of .entry -->
+        </div> <!-- end of .container -->
     <?php
     } 
     ?> 
 
-      </div>
-    </div>
-    <div class="wrapper" style="width: 100%; border-top: 10px solid red; border-bottom: 10px solid #000;">
-        <div class="container">
-        <?php
-          $mypages = get_pages( array( 'child_of' => 2, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
+      
+    </div> <!-- end of .wrapper --> 
 
-          foreach( $mypages as $page ) {    
-            $content = $page->post_content;
-              if ( ! $content ) // Check for empty page
-              continue;
-
-          $content = apply_filters( 'the_content', $content );
-        ?>
-        <h2><?php echo $page->post_title; ?></a></h2>
-        <div class="entry"><?php echo $content; ?></div>
-    <?php
-    } 
-    ?> 
-    </div>
-    </div>    
       <?php get_footer(); ?>
 
      

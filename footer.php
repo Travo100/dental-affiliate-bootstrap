@@ -1,5 +1,5 @@
  <hr>
-
+<div class="container">
       <footer>
         <div class="col-md-6">
         	<p>&copy; <?php bloginfo('name') ;?> <?php echo date( 'Y' )?></p>
