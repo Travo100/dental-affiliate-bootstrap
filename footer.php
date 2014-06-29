@@ -1,6 +1,7 @@
- <hr>
-<div class="container">
+
+	<div class="container">
       <footer>
+       
         <div class="col-md-6">
         	<p>&copy; <?php bloginfo('name') ;?> <?php echo date( 'Y' )?></p>
         </div>
@@ -17,7 +18,7 @@
          </div>
       </footer>
     </div> <!-- end of container -->
-	 
+	 <!-- modal for off-screen contact form -->
 	 <div class="modal fade" id="contactForm">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
