@@ -68,7 +68,7 @@
 
       
     
-   
+      <div class="container">
       <?php get_footer(); ?>
 
      

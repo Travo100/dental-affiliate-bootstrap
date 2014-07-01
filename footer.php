@@ -1,9 +1,9 @@
 
-	<div class="container">
+	
       <footer>
        
-        <div class="col-md-6">
-        	<p>&copy; <?php bloginfo('name') ;?> <?php echo date( 'Y' )?></p>
+        <div class="col-md-6" style="margin:0; padding:0;">
+        &copy; <?php bloginfo('name') ;?> <?php echo date( 'Y' )?>
         </div>
         <div class="col-md-6">
          <?php 
@@ -17,7 +17,7 @@
           ?>
          </div>
       </footer>
-    </div> <!-- end of container -->
+    
 	 <!-- modal for off-screen contact form -->
 	 <div class="modal fade" id="contactForm">
 	  <div class="modal-dialog">
