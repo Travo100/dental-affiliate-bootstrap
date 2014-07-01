@@ -1,7 +1,6 @@
     <?php get_header(); ?>
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="background-image: url(<?php echo header_image(); ?>); background-size: cover;">
-      
+    <div class="jumbotron" style="background-image: url('<?php echo header_image(); ?>');">
       <div class="container">
         <p class="phone-number"><i class="fa fa-phone fa-2x" style=" vertical-align:middle;"></i>+1-555-555-5555<p>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
