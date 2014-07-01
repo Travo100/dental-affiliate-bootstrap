@@ -27,10 +27,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            
+            <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+            <div class='site-logo'>
+                <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+            </div>
+            <?php else : ?>
+                
+                <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+                    <?php bloginfo('name'); ?>
+                </a>
 
-            <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-                <?php bloginfo('name'); ?>
-            </a>
+            <?php endif; ?>
+
+            
         </div>
 
         <?php

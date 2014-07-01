@@ -113,9 +113,6 @@ HEADER STYLES
   color: #fff;
 }
 
-/*.navbar-nav li a {
-	background: #000;	
-}*/
 .current-menu-parent li a {
   background: inherit;
 }
