@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            
+
             <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
             <div class='site-logo'>
                 <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
@@ -39,7 +39,12 @@
                 </a>
 
             <?php endif; ?>
-
+            
+            <div class="mobile-buttons">
+                <a href="#"><i class="fa fa-phone"></i></a>
+                <a href="#"><i class="fa fa-envelope"></i></a>
+                <a href="#"><i class="fa fa-map-marker"></i></a>
+            </div>
             
         </div>
 

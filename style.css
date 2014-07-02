@@ -14,12 +14,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 body {
   padding: 50px 0 20px 0;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
 .page-id-2 {
-  background-color: #B2BFCA;
-}
+  background-color: #B2BFCA; }
 
 .page-id-155 {
   background-color: #fff333;
@@ -31,56 +29,45 @@ body {
   color: #fff;
   border-top: 10px solid #000;
   border-bottom: 10px solid #000;
-  padding: 100px 0;
-}
-.page-id-155 h1 {
-  margin: 25px 0;
-  color: #fff;
-  text-shadow: 1px 1px 3px #000;
-}
-.page-id-155 h2 {
-  display: none;
-}
-.page-id-155 .col-md-6 {
-  background: #fff;
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 98%;
-  margin: 2% auto;
-  padding: 10px;
-  border: 3px solid #000;
-  border-radius: 8px;
-  color: #000;
-}
-@media (min-width: 990px) {
+  padding: 100px 0; }
+  .page-id-155 h1 {
+    margin: 25px 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000; }
+  .page-id-155 h2 {
+    display: none; }
   .page-id-155 .col-md-6 {
-    width: 48%;
-    margin: 2% 1%;
-  }
-}
+    background: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 98%;
+    margin: 2% auto;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    color: #000; }
+    @media (min-width: 990px) {
+      .page-id-155 .col-md-6 {
+        width: 48%;
+        margin: 2% 1%; } }
 
 .admin-bar .navbar-fixed-top {
   margin-top: 30px;
-  /*Makes the admin bar in wordpress viewable along with the nav-bar*/
-}
+  /*Makes the admin bar in wordpress viewable along with the nav-bar*/ }
 
 img {
   max-width: 100%;
   /*This code makes all images responsive to screen size and into block elements*/
   height: auto;
-  display: block;
-}
+  display: block; }
 
 h1, h2, h3, h4, h5, h6, a {
-  font-family: 'Oxygen', sans-serif;
-}
+  font-family: 'Oxygen', sans-serif; }
 
 p, em, cite {
-  font-family: 'Open Sans', sans-serif;
-}
+  font-family: 'Open Sans', sans-serif; }
 
 p {
-  font-size: 1em;
-}
+  font-size: 1em; }
 
 /*******************
 HEADER STYLES
@@ -91,103 +78,87 @@ HEADER STYLES
     position: absolute;
     background: #222;
     padding: 10px 15px;
-    width: 200px;
-  }
+    width: 200px; }
 
   li:hover .sub-menu {
-    display: block;
-  }
-}
+    display: block; } }
 .sub-menu li {
   margin-bottom: 10px;
-  list-style: none;
-}
-.sub-menu li:last-child {
-  margin-bottom: 0;
-}
+  list-style: none; }
+  .sub-menu li:last-child {
+    margin-bottom: 0; }
 .sub-menu a {
   color: #999;
-  text-decoration: none;
-}
-.sub-menu a:hover {
-  color: #fff;
-}
+  text-decoration: none; }
+  .sub-menu a:hover {
+    color: #fff; }
 
 .current-menu-parent li a {
-  background: inherit;
-}
+  background: inherit; }
 .current-menu-parent .current-menu-item a {
   color: #fff;
-  font-weight: bold;
-}
+  font-weight: bold; }
+
+.mobile-buttons {
+  margin: -37px 9px 0;
+  float: right; }
+  .mobile-buttons a {
+    padding-left: 10px; }
 
 /*******************
 FOOTER STYLES
 ********************/
 footer {
-  margin-top: 15px;
-}
+  margin-top: 15px; }
 
 .footer-nav {
   float: left;
-  padding: 0;
-}
-.footer-nav li {
-  list-style: none;
-}
+  padding: 0; }
+  .footer-nav li {
+    list-style: none; }
 
 /****************
 SIDEBAR STYLES
 *****************/
 .sidebar {
   margin-top: 40px;
-  color: #444;
-}
-.sidebar h3 {
-  color: #888;
-}
+  color: #444; }
+  .sidebar h3 {
+    color: #888; }
 
 .widget {
-  margin: 10px 0 30px;
-}
+  margin: 10px 0 30px; }
 
 /****************
 SIDEBAR STYLES
 *****************/
 article.post {
-  margin: 20px 0 40px;
-}
+  margin: 20px 0 40px; }
 
 /****************
 PORTFOLIO STYLES
 *****************/
 .col-xs-3.portfolio-piece {
-  width: 100%;
-}
+  width: 100%; }
 
 .portfolio-piece h4 {
-  font-size: .8em;
-}
+  font-size: .8em; }
 
 .prev-next {
   font-size: 1.25em;
   margin-top: 30px;
-  text-align: right;
-}
+  text-align: right; }
 
 /****************
 FRONTPAGE STYLES
 *****************/
 .phone-number {
-  float: right;
-}
+  float: right; }
 
 .social-icons a {
-  padding-right: 10px;
-}
-.social-icons a:last-child {
-  padding-right: 0;
-}
+  padding-right: 10px; }
+  .social-icons a:last-child {
+    padding-right: 0; }
 
 /****************
 GALLERY STYLES
@@ -195,14 +166,11 @@ GALLERY STYLES
 #links img {
   float: left;
   width: 100%;
-  margin: 2% 0;
-}
-@media (min-width: 425px) {
-  #links img {
-    max-width: 200px;
-    margin: 2%;
-  }
-}
+  margin: 2% 0; }
+  @media (min-width: 425px) {
+    #links img {
+      max-width: 200px;
+      margin: 2%; } }
 
 /****************
 GALLERY STYLES
@@ -212,8 +180,7 @@ GALLERY STYLES
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-}
+  background-size: cover; }
 
 /*
  * Off Canvas
@@ -224,70 +191,59 @@ GALLERY STYLES
     position: relative;
     -webkit-transition: all .25s ease-out;
     -moz-transition: all .25s ease-out;
-    transition: all .25s ease-out;
-  }
+    transition: all .25s ease-out; }
 
   .row-offcanvas-right {
-    right: 0;
-  }
+    right: 0; }
 
   .row-offcanvas-left {
-    left: 0;
-  }
+    left: 0; }
 
   .row-offcanvas-right .sidebar-offcanvas {
     right: -50%;
-    /* 6 columns */
-  }
+    /* 6 columns */ }
 
   .row-offcanvas-left .sidebar-offcanvas {
     left: -50%;
-    /* 6 columns */
-  }
+    /* 6 columns */ }
 
   .row-offcanvas-right.active {
     right: 50%;
-    /* 6 columns */
-  }
+    /* 6 columns */ }
 
   .row-offcanvas-left.active {
     left: 50%;
-    /* 6 columns */
-  }
+    /* 6 columns */ }
 
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
     width: 50%;
-    /* 6 columns */
-  }
-}
+    /* 6 columns */ } }
 .woocomm-setup {
   width: 1200px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
+@media screen and (min-width: 768px) {
+  .mobile-buttons {
+    display: none; } }
 @media screen and (min-width: 575px) {
   .prev-next {
     margin-top: 30px;
-    font-size: 1.5em;
-  }
+    font-size: 1.5em; }
 
   .social-icons {
-    float: right;
-  }
-}
+    float: right; } }
 @media screen and (min-width: 400px) {
   .col-xs-3.portfolio-piece {
-    width: 25%;
-  }
+    width: 25%; }
 
   .footer-nav {
-    float: right;
-  }
-  .footer-nav li {
-    float: left;
-    padding-right: 10px;
-    list-style: none;
-  }
-}
+    float: right; }
+    .footer-nav li {
+      float: left;
+      padding-right: 10px;
+      list-style: none; } }
+@media screen and (min-width: 300px) {
+  .mobile-buttons {
+    margin: 15px 10px 0; } }
