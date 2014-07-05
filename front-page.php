@@ -8,10 +8,11 @@
           <?php the_content(); ?>
       
       <?php endwhile; endif; ?>
+        <!-- these are social media buttons for themes, you can hardcode them if you'd lke -->
         <div class="social-icons">
-          <a href="#"><i class="fa fa-facebook fa-3x"></i></a>
-          <a href="#"><i class="fa fa-twitter fa-3x"></i></a>
-          <a href="#"><i class="fa fa-linkedin fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_facebook_url'); ?>"><i class="fa fa-facebook fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_twitter_url'); ?>"><i class="fa fa-twitter fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_linkedin_url'); ?>"><i class="fa fa-linkedin fa-3x"></i></a>
           <a href="#"><i class="fa fa-google fa-3x"></i></a>
           <a href="#"><i class="fa fa-pinterest fa-3x"></i></a>
           <a href="#"><i class="fa fa-youtube fa-3x"></i></a>
