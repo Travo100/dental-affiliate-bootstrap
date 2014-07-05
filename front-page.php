@@ -2,20 +2,20 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="background-image: url('<?php echo header_image(); ?>');">
       <div class="container">
-        <p class="phone-number"><i class="fa fa-phone fa-2x" style=" vertical-align:middle;"></i>+1-555-555-5555<p>
+        <p class="phone-number"><i class="fa fa-phone fa-2x" style=" vertical-align:middle;"></i><?php echo get_option('shortname_phone_url'); ?><p>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       
           <?php the_content(); ?>
       
       <?php endwhile; endif; ?>
-        <!-- these are social media buttons for themes, you can hardcode them if you'd lke -->
+        <!-- these are social media buttons for themes, you can hardcode them if -->
         <div class="social-icons">
           <a href="<?php echo get_option('shortname_facebook_url'); ?>"><i class="fa fa-facebook fa-3x"></i></a>
           <a href="<?php echo get_option('shortname_twitter_url'); ?>"><i class="fa fa-twitter fa-3x"></i></a>
           <a href="<?php echo get_option('shortname_linkedin_url'); ?>"><i class="fa fa-linkedin fa-3x"></i></a>
-          <a href="#"><i class="fa fa-google fa-3x"></i></a>
-          <a href="#"><i class="fa fa-pinterest fa-3x"></i></a>
-          <a href="#"><i class="fa fa-youtube fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_googleplus_url'); ?>"><i class="fa fa-google fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_pinterest_url'); ?>"><i class="fa fa-pinterest fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_youtube_url'); ?>"><i class="fa fa-youtube fa-3x"></i></a>
         </div>
       
       </div>

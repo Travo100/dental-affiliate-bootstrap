@@ -207,6 +207,42 @@ array( "name" => "Twitter",
 "id" => $shortname."_twitter_url",
 "type" => "text",
 "std" => ""),
+
+array( "name" => "LinkedIn",
+"desc" => "Put your LinkedIn URL here",
+"id" => $shortname."_linkedin_url",
+"type" => "text",
+"std" => ""),
+
+array( "name" => "Google+",
+"desc" => "Put your Google+ URL here",
+"id" => $shortname."_googleplus_url",
+"type" => "text",
+"std" => ""),
+
+array( "name" => "Pinterest",
+"desc" => "Put your Pinterest URL here",
+"id" => $shortname."_pinterest_url",
+"type" => "text",
+"std" => ""),
+
+array( "name" => "YouTube",
+"desc" => "Put your YouTube URL here",
+"id" => $shortname."_youtube_url",
+"type" => "text",
+"std" => ""),
+
+array( "name" => "Phone Number",
+"desc" => "Put your phone number here",
+"id" => $shortname."_phone_url",
+"type" => "text",
+"std" => ""),
+
+array( "name" => "E-mail",
+"desc" => "Put your E-mail here",
+"id" => $shortname."_mailto_url",
+"type" => "text",
+"std" => ""),
  
 array( "type" => "close")
 
