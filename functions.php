@@ -243,6 +243,12 @@ array( "name" => "E-mail",
 "id" => $shortname."_mailto_url",
 "type" => "text",
 "std" => ""),
+
+array( "name" => "Google Maps",
+"desc" => "Put your Google Maps location here",
+"id" => $shortname."_googlemaps_url",
+"type" => "text",
+"std" => ""),
  
 array( "type" => "close")
 

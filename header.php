@@ -43,7 +43,7 @@
             <div class="mobile-buttons">
                 <a href="tel:<?php echo get_option('shortname_phone_url'); ?>"><i class="fa fa-phone"></i></a>
                 <a href="mailto:<?php echo get_option('shortname_mailto_url'); ?>"><i class="fa fa-envelope"></i></a>
-                <a href="#"><i class="fa fa-map-marker"></i></a>
+                <a href="<?php echo get_option('shortname_googlemaps_url'); ?>"><i class="fa fa-map-marker"></i></a>
             </div>
             
         </div>
