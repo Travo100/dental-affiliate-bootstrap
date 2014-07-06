@@ -12,7 +12,7 @@
     </title>
 
     <?php wp_head(); ?>
-
+    <?php echo get_option('shortname_googleanalytics_code'); ?>
   </head>
 
   <body <?php body_class(); ?>>

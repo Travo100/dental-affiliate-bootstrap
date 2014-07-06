@@ -12,7 +12,7 @@ display:block;
 float:left;
 }
 .option_input {
-padding:30px 10px;
+padding: 5px 10px;
 border-bottom:1px solid #ddd;
 border-top:1px solid #fff;
 }
@@ -44,7 +44,6 @@ background:#f3f3f3;
 }
 .input_title h3 {
 color: #464646;
-cursor: pointer;
 float: left;
 font-size: 14px;
 margin: 0;

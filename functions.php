@@ -159,35 +159,52 @@ array( "name" => "General",
 "type" => "section"),
 array( "type" => "open"),
  
-array( "name" => "Logo URL",
-"desc" => "Enter the link to your logo image",
-"id" => $shortname."_logo",
+// array( "name" => "Logo URL",
+// "desc" => "Enter the link to your logo image",
+// "id" => $shortname."_logo",
+// "type" => "text",
+// "std" => ""),
+ 
+// array( "name" => "Custom Favicon",
+// "desc" => "A favicon is a 16x16 pixel icon that represents your site; paste the URL to a .ico image that you want to use as the image",
+// "id" => $shortname."_favicon",
+// "type" => "text",
+// "std" => get_bloginfo('url') ."/images/favicon.ico"),
+
+array( "name" => "Phone Number",
+"desc" => "Put your phone number here",
+"id" => $shortname."_phone_url",
 "type" => "text",
 "std" => ""),
- 
-array( "name" => "Custom Favicon",
-"desc" => "A favicon is a 16x16 pixel icon that represents your site; paste the URL to a .ico image that you want to use as the image",
-"id" => $shortname."_favicon",
+
+array( "name" => "E-mail",
+"desc" => "Put your E-mail here",
+"id" => $shortname."_mailto_url",
 "type" => "text",
-"std" => get_bloginfo('url') ."/images/favicon.ico"),
+"std" => ""),
+
+array( "name" => "Google Maps",
+"desc" => "Put your Google Maps location here",
+"id" => $shortname."_googlemaps_url",
+"type" => "text",
+"std" => ""),
  
 array( "type" => "close"),
  
 /* ---------------------------------------------------------
 Home section
 ----------------------------------------------------------- */
-array( "name" => "Homepage",
-"type" => "section"),
-array( "type" => "open"),
+// array( "name" => "Google Analytics",
+// "type" => "section"),
+// array( "type" => "open"),
  
-array( "name" => "Homepage Featured",
-"desc" => "Choose a category from which featured posts are drawn",
-"id" => $shortname."_feat_cat",
-"type" => "select",
-"options" => $all_cats,
-"std" => "Select a category"),
+// array( "name" => "Google Analytics",
+// "desc" => "Paste your Google Analytics code here",
+// "id" => $shortname."_googleanalytics_code",
+// "type" => "textarea",
+// "std" => ""),
  
-array( "type" => "close"),
+// array( "type" => "close"),
  
 /* ---------------------------------------------------------
 Footer section
@@ -197,13 +214,13 @@ array( "name" => "Social Media",
 array( "type" => "open"),
  
 array( "name" => "Facebook",
-"desc" => "Put your facebook URL here",
+"desc" => "Put your Facebook URL here",
 "id" => $shortname."_facebook_url",
 "type" => "text",
 "std" => ""),
 
 array( "name" => "Twitter",
-"desc" => "Put your twitter URL here",
+"desc" => "Put your Twitter URL here",
 "id" => $shortname."_twitter_url",
 "type" => "text",
 "std" => ""),
@@ -232,24 +249,6 @@ array( "name" => "YouTube",
 "type" => "text",
 "std" => ""),
 
-array( "name" => "Phone Number",
-"desc" => "Put your phone number here",
-"id" => $shortname."_phone_url",
-"type" => "text",
-"std" => ""),
-
-array( "name" => "E-mail",
-"desc" => "Put your E-mail here",
-"id" => $shortname."_mailto_url",
-"type" => "text",
-"std" => ""),
-
-array( "name" => "Google Maps",
-"desc" => "Put your Google Maps location here",
-"id" => $shortname."_googlemaps_url",
-"type" => "text",
-"std" => ""),
- 
 array( "type" => "close")
 
 );
@@ -372,9 +371,9 @@ function theme_settings_page() {
           <input type="hidden" name="action" value="save" />
           </form>
           <form method="post">
-              <p class="submit">
+              <!-- <p class="submit">
               <input name="reset" type="submit" value="Reset" />
-              <input type="hidden" name="action" value="reset" />
+              <input type="hidden" name="action" value="reset" /> -->
               </p>
           </form>
         </div>
