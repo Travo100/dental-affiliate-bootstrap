@@ -1,8 +1,17 @@
+<?php require('dynamic_content.php') ?>
+<?php register_dyn_content( array(
+        "home" => array (
+            "title" 
+        )
+) ); ?>
+
+<!-- <?php get_dyn_content("home", "title"); ?>  The getter function --> 
+
 <?php 
 
 
 	function theme_styles() {
-		wp_enqueue_style( 'google-fonts','http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Oxygen:400,700' );
+		wp_enqueue_style( 'google-fonts','http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Great+Vibes|Tangerine' );
 		wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 		wp_enqueue_style( 'boostrap_css', get_template_directory_uri() . '/css/bootstrap.min.css' );
 		wp_enqueue_style( 'blueimp', 'http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css' );
@@ -63,7 +72,7 @@ function register_theme_menus() {
 	register_nav_menus(
 		array(
 			'primary' => __( 'Primary Menu', 'dental-affiliate-bootstrap' ),
-			'footer_menu' => __( 'Footer Menu', 'dental-affiliate-bootstrap' )
+			'footer' => __( 'Footer Menu', 'dental-affiliate-bootstrap' )
 		)
 	);
 }
@@ -107,6 +116,33 @@ function bootstrap_theme_customizer( $wp_customize ) {
 ) ) );
 }
 add_action('customize_register', 'bootstrap_theme_customizer');
+
+
+add_filter('widget_text', 'do_shortcode');
+
+//shortcode for posting blog catgories on a page use code [listposts num="number of post you want to show" cat="post categories"] or [listposts num="3" cat="1"]
+function sc_listposts($atts, $content = null) {
+        extract(shortcode_atts(array(
+                "num" => '5',
+                "cat" => ''
+        ), $atts));
+        global $post;
+        $myposts = get_posts('numberposts='.$num.'&order=DESC&orderby=post_date&category='.$cat);
+        $retour='<ul>';
+        foreach($myposts as $post) :
+                setup_postdata($post);
+             $retour.= '<li class="image-post">' . '<a href="' . get_permalink() . '">' . get_the_post_thumbnail($page->ID, array(70,70) ) . '</li>' . '</a>' .
+          '<li>' . '<a href="' . get_permalink() . '">' . get_the_title() . '</a>'. '<br />' . get_the_excerpt() . '<br />' . '<em>' . get_the_date() . '</em>' . '</li>';
+        endforeach;
+        $retour.='</ul> ';
+        return $retour;
+}
+add_shortcode("listposts", "sc_listposts");
+
+function custom_excerpt_length( $length ) {
+    return 5;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /* ----------------------------------------------------------
 Declare vars
@@ -194,17 +230,17 @@ array( "type" => "close"),
 /* ---------------------------------------------------------
 Home section
 ----------------------------------------------------------- */
-// array( "name" => "Google Analytics",
-// "type" => "section"),
-// array( "type" => "open"),
+array( "name" => "Google Analytics",
+"type" => "section"),
+array( "type" => "open"),
  
-// array( "name" => "Google Analytics",
-// "desc" => "Paste your Google Analytics code here",
-// "id" => $shortname."_googleanalytics_code",
-// "type" => "textarea",
-// "std" => ""),
+array( "name" => "Google Analytics",
+"desc" => "Paste your Google Analytics code here",
+"id" => $shortname."_googleanalytics_code",
+"type" => "textarea",
+"std" => ""),
  
-// array( "type" => "close"),
+array( "type" => "close"),
  
 /* ---------------------------------------------------------
 Footer section
@@ -325,7 +361,7 @@ function theme_settings_page() {
                     case 'textarea': ?>
                     <div class="option_input option_textarea">
                     <label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
-                    <textarea name="<?php echo $value['id']; ?>" rows="" cols=""><?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id']) ); } else { echo $value['std']; } ?></textarea>
+                    <textarea name="<?php echo $value['id']; ?>" rows="" cols=""><?php if ( get_settings( $value['id'] ) != "") {  echo stripslashes(get_settings( $value['id']) );  } else { echo $value['std']; } ?></textarea>
                     <small><?php echo $value['desc']; ?></small>
                     <div class="clearfix"></div>
                     </div>
