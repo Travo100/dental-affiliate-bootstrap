@@ -13,16 +13,40 @@
 <div class="row">
   <div class="col-md-12"> <!-- make a 12 col area for the content -->
       <?php if (have_posts() ): while ( have_posts() ) : the_post(); ?> <!-- wordpress loop to display content -->
-          
+        <?php
+        // Page Content Workaround
+        ob_start();
+        the_content();
+        $page_content = ob_get_clean();
+        ?>
         <div class="page-header"> <!-- page-header is a bootstrap class -->
           <h1><?php the_title(); ?></h1> <!-- get the page title and display it as an h1 -->
         </div>
             <!-- The container for the list of example images -->
     
         <div id="links">
-          <?php the_content(); ?>
+          <?php
+          $args = array(
+            'post_type' => 'gallery'
+          );
+          $q = new WP_Query($args);
+          if ($q->have_posts()) {
+            while ($q->have_posts()) {
+              $q->the_post();
+              $src = wp_get_attachment_url(get_post_thumbnail_id(the_ID()));
+          ?>
+          <a href="<?php echo $src; ?>" data-gallery><img src="<?php echo $src; ?>" /></a>
+          <?php
+            }
+          }
+          ?>
         </div>
-        <br>
+        <br />
+        <div class="row">
+          <div class="content col-md-12">
+            <?php echo $page_content; ?>
+          </div>
+        </div>
     </div>
     <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
     <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
