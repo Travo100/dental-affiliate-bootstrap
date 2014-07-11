@@ -3,7 +3,7 @@
       <footer>
        
         <div class="col-md-6" style="margin:0; padding:0;">
-        &copy; <?php bloginfo('name') ;?> <?php echo date( 'Y' )?>
+        <p>&copy; <?php bloginfo('name') ;?> <?php echo date( 'Y' )?> | Powered By <a href="">Dental Affiliate</a></p>
         </div>
         <div class="col-md-6">
          <?php 
