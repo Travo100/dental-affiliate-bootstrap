@@ -2,7 +2,6 @@
 // Requires
 require_once dirname(__FILE__) . '/utilities.php'; // Utilities Functions
 require_once dirname(__FILE__) . '/dynamic_content.php'; // Dynamic Content
-require_once dirname(__FILE__) . '/type-gallery.php'; // Custom Gallery Post-Type
 require_once dirname(__FILE__) . '/tgm.php'; // Setup Required Plugins
 require_once dirname(__FILE__) . '/enqueues.php'; // Enqueues
 require_once dirname(__FILE__) . '/theme_support.php'; // Theme Support
@@ -11,11 +10,6 @@ require_once dirname(__FILE__) . '/widgets.php'; // Custom Widgets
 require_once dirname(__FILE__) . '/customizer.php'; // Theme Customization
 require_once dirname(__FILE__) . '/shortcodes.php'; // Custom Shortcodes
 require_once dirname(__FILE__) . '/theme_options.php'; // Custom Theme Options
-
-function custom_excerpt_length( $length ) {
-  return 5;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 register_dyn_content( array(
   "home" => array (

@@ -12,7 +12,18 @@ function register_recommended_theme_plugins() {
       'name' => 'Wordpress Mover',
       'slug' => 'wp-mover',
       'source' => theme_link('/includes/plugins/mover.zip')
+    ),
+    array(
+      'name' => 'WP Bootstrap Gallery',
+      'slug' => 'wp-bootstrap-gallery',
+      'source' => theme_link('/includes/plugins/wp-bootstrap-gallery.zip')
+    ),
+     array(
+      'name' => 'ManageWP Worker',
+      'slug' => 'managewp-worker',
+      'source' => theme_link('/includes/plugins/worker.zip')
     )
+  
   );
 
   tgmpa($plugins, array(

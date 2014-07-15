@@ -19,40 +19,6 @@ body {
   overflow-x: hidden; 
 }
 
-.page-id-2 {
-  background-color: #B2BFCA;
-}
-
-.page-id-155 {
-  background-color: #fff333;
-  background: #00ffff url('images/city-background.jpg') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; 
-  color: #fff;
-  border-top: 10px solid #000;
-  border-bottom: 10px solid #000;
-  padding: 100px 0;
-  h1 { margin: 25px 0; color: #fff; text-shadow: 1px 1px 3px #000; }
-  h2 { display: none; }
-  .col-md-6 { 
-    background: #fff; 
-    background-color: rgba(255, 255, 255, 0.9); 
-    width: 98%; 
-    margin: 2% auto; 
-    padding: 10px; 
-    border: 3px solid #000; 
-    border-radius: 8px; 
-    color: #000;
-    @media(min-width: 990px) {
-      width: 48%;
-      margin: 2% 1%;
-    }
-  }
-
-}
-
 .admin-bar .navbar-fixed-top {
   margin-top: 30px;
   /*Makes the admin bar in wordpress viewable along with the nav-bar*/
@@ -62,7 +28,8 @@ img {
   max-width: 100%;
   /*This code makes all images responsive to screen size and into block elements*/
   height: auto;
-  display: block;
+  display: inline-block;
+
 }
 
 h1, h2, h3, h4, h5, h6, a {
@@ -148,10 +115,6 @@ SIDEBAR STYLES
 
 .sidebar {
   margin-top: 40px;
-  color: #444;
-  h3 {
-    color: #888;
-  }
 }
 
 .widget {
@@ -216,7 +179,7 @@ GALLERY STYLES
 }
 
 /****************
-GALLERY STYLES
+JUMBOTRON STYLES
 *****************/
 .jumbotron {
   
@@ -225,6 +188,16 @@ GALLERY STYLES
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+/****************
+SHORTCODE STYLES 
+*****************/
+#shortcode-ul {
+  padding: 0;
+  li { list-style-type: none; padding-top: 5px;}
+  img { float: left; margin-right: 10px; }
+
 }
 
 /*

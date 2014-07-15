@@ -2,8 +2,8 @@
 	
       <footer>
        
-        <div class="col-md-6" style="margin:0; padding:0;">
-        <p>&copy; <?php bloginfo('name') ;?> <?php echo date( 'Y' )?> | Powered By <a href="">Dental Affiliate</a></p>
+        <div class="col-md-6" style="padding:0;">
+        <p>&copy;<?php echo date( 'Y' ); ?> <?php bloginfo('name') ;?> &bull; Powered By <a href="http://dentalaffiliate.com" target="dental">Dental Affiliate&trade;</a>
         </div>
         <div class="col-md-6">
          <?php 
