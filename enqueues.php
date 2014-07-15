@@ -21,6 +21,7 @@ function theme_js() {
 
 
   wp_enqueue_script( 'blue_imp', 'http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js', '', '', true );
+  wp_enqueue_script ( 'retina_js', get_template_directory_uri() . '/js/retina.js', '', '', true );
   wp_enqueue_script ( 'fixtext_js', get_template_directory_uri() . '/js/jquery.fittext.js', '', '', true );
   wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/js/theme.js', array('jquery', 'bootstrap_js'), '', true );
   wp_enqueue_script( 'blue_imp_js', get_template_directory_uri() . '/js/bootstrap-image-gallery.min.js', array('jquery'), '',true);

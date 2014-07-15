@@ -1,4 +1,5 @@
 <?php
+
 //shortcode for posting blog catgories on a page use code [listposts num="number of post you want to show" cat="post categories"] or [listposts num="3" cat="1"]
 function sc_listposts($atts, $content = null) {
         extract(shortcode_atts(array(
@@ -30,17 +31,39 @@ function excerpt($limit) {
  return $excerpt;
 }
 
-function content($limit) {
- $content = explode(' ', get_the_content(), $limit);
- if (count($content)>=$limit) {
- array_pop($content);
- $content = implode(" ",$content).'...';
- } else {
- $content = implode(" ",$content);
- }
- $content = preg_replace('/[.+]/','', $content);
- $content = apply_filters('the_content', $content);
- $content = str_replace(']]>', ']]&gt;', $content);
- return $content;
+
+/*
+*shortcode for adding font-awesome icons anywhere in the theme, wordpress ignores <i> tags otherwise inside it's editor
+* Basic use: [icon type="google-plus-square"] generates a google plus icon. 
+* Read more: http://www.gregreindel.com/adding-font-awesome-icons-via-shortcode/
+*/
+function addscFontAwesome($atts) {
+    extract(shortcode_atts(array(
+    'type'  => '',
+    'size' => '',
+    'rotate' => '',
+    'flip' => '',
+    'pull' => '',
+    'animated' => '',
+    'class' => '',
+  
+    ), $atts));
+ 
+    $classes  = ($type) ? 'fa-'.$type. '' : 'fa-star';
+    $classes .= ($size) ? ' fa-'.$size.'' : '';
+    $classes .= ($rotate) ? ' fa-rotate-'.$rotate.'' : '';
+    $classes .= ($flip) ? ' fa-flip-'.$flip.'' : '';
+    $classes .= ($pull) ? ' pull-'.$pull.'' : '';
+    $classes .= ($animated) ? ' fa-spin' : '';
+    $classes .= ($class) ? ' '.$class : '';
+ 
+    $theAwesomeFont = '<i class="fa '.esc_html($classes).'"></i>';
+      
+    return $theAwesomeFont;
 }
+  
+add_shortcode('icon', 'addscFontAwesome');
+
+
+
 ?>
