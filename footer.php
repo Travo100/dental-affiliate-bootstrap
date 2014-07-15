@@ -18,7 +18,7 @@
          </div>
       </footer>
     
-	 <!-- modal for off-screen contact form -->
+	<!-- modal for off-screen contact form -->
 	 <div class="modal fade" id="contactForm">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
@@ -28,7 +28,9 @@
 	      </div>
 	      <div class="modal-body">
 	        <?php
-	        	if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }
+	        	if( function_exists( 'gravity_form' ) ){ gravity_form(1, false, false, false, '', false); }
+	        	
+
 	        ?>
 	      </div>
 	      <div class="modal-footer">
