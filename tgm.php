@@ -18,10 +18,15 @@ function register_recommended_theme_plugins() {
       'slug' => 'wp-bootstrap-gallery',
       'source' => theme_link('/includes/plugins/wp-bootstrap-gallery.zip')
     ),
-     array(
+    array(
       'name' => 'ManageWP Worker',
       'slug' => 'managewp-worker',
       'source' => theme_link('/includes/plugins/worker.zip')
+    ),
+    array(
+      'name' => 'Real Time Find and Replace',
+      'slug' => 'real-time-find-and-replace',
+      'source' => theme_link('/includes/plugins/real-time-find-and-replace.zip')
     )
   
   );
