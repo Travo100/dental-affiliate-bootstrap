@@ -21,11 +21,11 @@ function theme_js() {
 
 
   wp_enqueue_script( 'blue_imp', 'http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js', '', '', true );
+  wp_enqueue_script ( 'fixtext_js', get_template_directory_uri() . '/js/jquery.fittext.js', '', '', true );
   wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/js/theme.js', array('jquery', 'bootstrap_js'), '', true );
   wp_enqueue_script( 'blue_imp_js', get_template_directory_uri() . '/js/bootstrap-image-gallery.min.js', array('jquery'), '',true);
-
   wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
-  /* the bootstrap min for some reasons conflicts with the wp_bootstrap_navwalker.php */
+  
 
 }	
 add_action( 'wp_enqueue_scripts', 'theme_js' );
