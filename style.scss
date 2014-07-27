@@ -1,7 +1,7 @@
 /*
 Theme Name: Dental Affiliate Bootstrap
 Theme URI: http://dentalaffiliate.com/
-Author: Travis Thompson
+Author: Travis Thompson, Matthew Roelle
 Author URI: http://dentalaffiliate.com/
 Description: The Dental Affilate Bootstrap theme is meant to be built upon as a framework.
 Version: 1.0
@@ -32,16 +32,16 @@ img {
 
 }
 
-h1, h2, h3, h4, h5, h6, a {
-  font-family: 'Oxygen', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oxygen', sans-serif; 
 }
 
-p, em, cite {
+p, em, cite, li, q, a {
   font-family: 'Open Sans', sans-serif;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1em; //base size of bootstrap is 14px
 }
 
 /*******************
@@ -168,10 +168,18 @@ FRONTPAGE STYLES
 GALLERY STYLES
 *****************/
 
+#blueimp-gallery .modal-body.next img  {
+  
+  max-width: 85%;
+  margin:0 auto;
+  height: auto;
+}
+
 #links img {
     float: left;
     width: 100%;
     margin: 2% 0;
+    
     @media(min-width: 425px) {
       max-width: 200px; 
       margin: 2%;

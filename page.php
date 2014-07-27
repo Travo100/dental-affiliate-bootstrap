@@ -17,9 +17,9 @@
           </div>
 
           <?php the_content() ?> <!-- get the content of the page -->
-
+          <div style="clear:both;"></div>
           <hr>
-
+          
           <?php comments_template(); ?>
 
         <?php endwhile; else: ?>

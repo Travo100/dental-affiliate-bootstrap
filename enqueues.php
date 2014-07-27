@@ -6,6 +6,7 @@ function theme_styles() {
   wp_enqueue_style( 'blueimp', 'http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css' );
   wp_enqueue_style( 'image-gallery', get_template_directory_uri() . '/css/bootstrap-image-gallery.min.css'); 
   wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
+  //wp_enqueue_style( 'updates_css', get_template_directory_uri() . '/updates.css' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 

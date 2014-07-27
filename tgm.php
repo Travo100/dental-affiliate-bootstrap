@@ -14,9 +14,9 @@ function register_recommended_theme_plugins() {
       'source' => theme_link('/includes/plugins/mover.zip')
     ),
     array(
-      'name' => 'WP Bootstrap Gallery',
-      'slug' => 'wp-bootstrap-gallery',
-      'source' => theme_link('/includes/plugins/wp-bootstrap-gallery.zip')
+      'name' => 'WordPress Importer',
+      'slug' => 'wordpress-importer',
+      'source' => theme_link('/includes/plugins/wordpress-importer.zip')
     ),
     array(
       'name' => 'ManageWP Worker',
@@ -27,6 +27,11 @@ function register_recommended_theme_plugins() {
       'name' => 'Real Time Find and Replace',
       'slug' => 'real-time-find-and-replace',
       'source' => theme_link('/includes/plugins/real-time-find-and-replace.zip')
+    ),
+    array(
+      'name' => 'Desktop Server for Wordpress',
+      'slug' => 'desktopserver',
+      'source' => theme_link('/includes/plugins/desktopserver.zip')
     )
   
   );
