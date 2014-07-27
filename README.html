@@ -1,0 +1,34 @@
+<p>dental-affiliate-bootstrap is a theme built for ePractice Media. </p>
+<p>v0.1 - 06.25.2014</p>
+<ul>
+<li>Upload prototype to github</li>
+<li>Made smile gallery template using blue imp (to add images to lightbox you must but &quot;data-gallery&quot; and the end of their link)</li>
+<li>Comes with dynamic head, footer, pop-up contact form, blueimp photo/video gallery.</li>
+<li>Includes the following template files: (Full Width Template, Smile Gallery)</li>
+<li>Includes font awesome icons to use at your disposal</li>
+</ul>
+<p>v0.2 - 07.25.2014</p>
+<ul>
+<li>Shortcode [icon-type=&quot;&quot;] added. Ex: [icon type=&quot;google-plus-square&quot;] displays a google plus icon</li>
+<li>Shortcode [listposts num=&quot;3&quot; cat=&quot;1&quot;] has been added. The shortcode displays the number of posts by its respective category.</li>
+<li>Theme options have been added along with dynamic content.</li>
+<li>Any wordpress gallery now opens its thumbnails in the blueimp lightbox.</li>
+<li>FitText.js, Retina.js added and can be used at your disposal. </li>
+<li>Current issue where if shortcode is used on any child pages it takes away its page ID number. You can still style that page by 
+using .page-id as your class. </li>
+</ul>
+<p>Using Dynamic Content Generator:</p>
+<ol>
+<li>Go to functions.php</li>
+<li>See the example given in the theme. You use associative arrays to create seperated content.</li>
+<li>To call the content into your theme simply place it into any .php file 
+ Ex: &lt;?php get_dyn_content(&quot;home&quot;, &quot;title&quot;); ?&gt;</li>
+</ol>
+<p>Creating a page with sections:</p>
+<ol>
+<li>In WordPress create a Home page.</li>
+<li>Create a seperate page in WordPress and make its parent the Home page.</li>
+<li>To style the page you just created look up its page ID by viewing the source or using the web inspector tool.</li>
+<li>You can see the page id in the body class Ex.&quot;page-id-23&quot;</li>
+<li>Go into your CSS file and simply called .page-id-23 and style how you would like. </li>
+</ol>
