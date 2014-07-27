@@ -41,6 +41,11 @@ p {
   font-size: 1em;
 }
 
+.section-title {
+  font-family: "Oxygen", sans-serif;
+  line-height: 2em;
+}
+
 /*******************
 HEADER STYLES
 ********************/
@@ -199,6 +204,10 @@ SHORTCODE STYLES
   margin-right: 10px;
 }
 
+.list-posts {
+  margin: 25px 0;
+}
+
 /*
  * Off Canvas
  * --------------------------------------------------
@@ -284,4 +293,7 @@ SHORTCODE STYLES
   .mobile-buttons {
     margin: 15px 10px 0;
   }
+}
+.nocomments {
+  display: none;
 }

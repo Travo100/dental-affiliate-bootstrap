@@ -14,4 +14,4 @@ jQuery(document).ready(function ( $ ) {
 });
 
 //This is for the fittext.js plugin, modify it how you would like!
-jQuery("#responsive_headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '150px' })
+jQuery(".section-title").fitText(2.0, { minFontSize: '18px', maxFontSize: '36px' })

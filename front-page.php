@@ -58,7 +58,7 @@
       
       <div class="wrapper page-id-<?php echo $page->ID ?>"> 
       <div class="container">
-        <h2><?php echo $page->post_title; ?></h2>
+        <p class="section-title"><?php echo $page->post_title; ?></p>
 
         <div class="entry"><?php echo $content; ?></div> <!-- end of .entry -->
         </div> <!-- end of .container -->

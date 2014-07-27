@@ -11,8 +11,8 @@ function sc_listposts($atts, $content = null) {
         $retour='<ul id="shortcode-ul">';
         foreach($myposts as $post) :
                 setup_postdata($post);
-             $retour.= '<li class="image-post">' . '<a href="' . get_permalink() . '">' . get_the_post_thumbnail($page->ID, array(70,70) ) . '</li>' . '</a>' .
-          '<li>' . '<a href="' . get_permalink() . '">' . get_the_title() . '</a>'. '<br />' . excerpt(5) . '<br />' . '<em>' . get_the_date() . '</em>' . '</li>';
+             $retour.= '<div class="list-posts">' . '<li class="image-post">' . '<a href="' . get_permalink() . '">' . get_the_post_thumbnail($page->ID, array(70,70) ) . '</li>' . '</a>' .
+          '<li>' . '<a href="' . get_permalink() . '">' . get_the_title() . '</a>'. '<br />' . excerpt(5) . '<br />' . '<em>' . get_the_date() . '</em>' . '</li>' . '</div>';
         endforeach;
         $retour.='</ul> ';
         return $retour;
