@@ -11,6 +11,7 @@ require_once dirname(__FILE__) . '/customizer.php'; // Theme Customization
 require_once dirname(__FILE__) . '/shortcodes.php'; // Custom Shortcodes
 require_once dirname(__FILE__) . '/theme_options.php'; // Custom Theme Options
 require_once dirname(__FILE__) . '/gallery.php'; // Custom Gallery Lightbox
+require_once dirname(__FILE__) . '/video-gallery.php'; // Video Gallery
 
 register_dyn_content( array(
   "home" => array (

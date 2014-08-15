@@ -1,0 +1,75 @@
+<?php
+
+/*
+  Template Name: Video Gallery Template
+  Desciption: This template allows the content to span to full width of the page within a col-md-12 class. 
+ */
+
+?>
+<?php get_header(); ?>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12"> <!-- make a 12 col area for the content -->
+      <?php if (have_posts() ): while ( have_posts() ) : the_post(); ?> <!-- wordpress loop to display content -->
+
+        <div class="page-header"> <!-- page-header is a bootstrap class -->
+          <h1><?php the_title(); ?></h1> <!-- get the page title and display it as an h1 -->
+        </div>
+
+
+
+        <?php the_content() ?> <!-- get the content of the page -->
+
+      <div id="large-video" style="max-width: 560px; width:100%; margin: 0 auto;">
+       <iframe width="100%" height="315" src="//www.youtube.com/embed/X03_bNuihLU" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-thumbnails-row" style="margin: 5% 0 0 0;">
+<?php 
+foreach(get_vgallery_ids() as $id) {
+  $a = addslashes(get_post_meta($id, 'embed', true));
+  var_dump($a);
+?>
+<div class="col-md-3">
+<a class="thumb" href="#<?php echo $id; ?>" data-embed="<?php echo addslashes(get_post_meta($id, 'embed', true)); ?>">
+    <?php echo get_post_meta($id, 'video_name', true); ?>
+  </a>
+</div>
+<?php
+}
+?>
+      </div>
+
+
+      <?php endwhile; else: ?>
+
+        <div class="page-header">
+          <h1>Oh no!</h1>
+        </div>
+
+        <p>No content is appering for this page!</p>
+
+        <?php endif; ?>
+  </div> <!-- end of col-md-12-->
+
+</div>
+<script>
+function stripslashes(str) {
+  str=str.replace(/\\'/g,'\'');
+  str=str.replace(/\\"/g,'"');
+  str=str.replace(/\\0/g,'\0');
+  str=str.replace(/\\\\/g,'\\');
+  return str;
+}
+
+jQuery(function($) {
+  $('.thumb').click(function() {
+    $('#large-video').html(stripslashes($(this).attr('data-embed')));
+  });
+});
+</script>
+<?php get_footer(); ?>
+
+

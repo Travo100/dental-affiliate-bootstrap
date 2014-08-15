@@ -1,5 +1,6 @@
 <?php
-/* * Template Name: Gallery
+/*
+ * Template Name: Gallery
  */
 get_header();
 ?>

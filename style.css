@@ -345,3 +345,127 @@ article.post .thumbnail {
     left: -4px;
     position: relative;
     bottom: -35px; }
+
+.thumbs {
+  width: 100%;
+  overflow-x: hidden; }
+  .thumbs .scroll-control {
+    height: 270px;
+    width: 45px;
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    background-color: #222222;
+    box-shadow: 0px 0px 20px #222222;
+    text-align: center;
+    transition: all 0.2s ease-out; }
+    .thumbs .scroll-control .fa {
+      position: relative;
+      bottom: -40%;
+      font-size: 36px;
+      color: white; }
+    .thumbs .scroll-control:hover {
+      width: 70px; }
+  .thumbs #scroll-left {
+    left: 0; }
+  .thumbs #scroll-right {
+    right: 0; }
+  .thumbs .thumb {
+    display: inline-block;
+    width: 480px;
+    margin: 0px;
+    height: 270px;
+    text-decoration: none !important;
+    float: left; }
+    @media screen and (max-width: 1025px) {
+      .thumbs .thumb {
+        height: 180px; } }
+    @media screen and (max-width: 500px) {
+      .thumbs .thumb {
+        width: 50%; } }
+    .thumbs .thumb .preview {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      text-align: center; }
+      .thumbs .thumb .preview .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        position: relative;
+        margin-bottom: -340px;
+        z-index: 500;
+        opacity: 0;
+        transition: all 0.3s ease-in-out; }
+      .thumbs .thumb .preview p {
+        z-index: 1000;
+        position: relative;
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        margin-top: 70px;
+        opacity: 1;
+        transition: all 0.3s ease-in-out; }
+        .thumbs .thumb .preview p span {
+          display: block;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.75);
+          color: white;
+          font-weight: 900;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          position: relative; }
+        .thumbs .thumb .preview p .fa {
+          display: block;
+          width: 70px;
+          height: 70px;
+          border-radius: 100%;
+          margin: 20px auto;
+          border: 4px solid white;
+          padding: 18px;
+          padding-top: 10px;
+          opacity: 0;
+          transition: all 0.3s ease-in-out; }
+      .thumbs .thumb .preview:hover .overlay {
+        opacity: 0.75; }
+      .thumbs .thumb .preview:hover p .fa {
+        margin-top: 40px;
+        opacity: 1; }
+
+#large-video {
+  width: 100%;
+  background-color: #090909;
+  margin-bottom: 0px;
+  overflow: hidden;
+  position: relative;
+  z-index: 50000; }
+  #large-video .video-share {
+    position: absolute;
+    z-index: 5000;
+    right: -20px; }
+  #large-video #facebook-share {
+    top: 50px; }
+  #large-video #twitter-share {
+    top: 85px; }
+  #large-video #target {
+    width: 58%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    background-color: white;
+    box-shadow: 0px 0px 200px rgba(255, 255, 255, 0.5);
+    display: block;
+    transition: all 0.45s ease-out;
+    position: relative;
+    left: 0px; }
+    #large-video #target.out {
+      left: -1000px;
+      opacity: 0; }
+    #large-video #target.in {
+      left: 1000px;
+      transition: none !important;
+      opacity: 0; }
+    #large-video #target #replacement {
+      width: 100%;
+      height: 100%; }
