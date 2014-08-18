@@ -357,12 +357,23 @@ article.post
 .thumbs
   width: 100%
   overflow-x: hidden
+  .scroll-container
+    @media screen and (max-width: 768px)
+      transition: transform 0.3s ease-in-out
+      -webkit-transition: -webkit-transform 0.3s ease-in-out
   .scroll-control
     height: 270px
     width: 45px
+    z-index: 100000
+    @media screen and (max-width: 1450px)
+      height: 220px
+    @media screen and (max-width: 1250px)
+      height: 190px
+      width: 35px
+    @media screen and (max-width: 768px)
+      height: 110px
     display: block
     position: absolute
-    z-index: 2000
     background-color: #222
     box-shadow: 0px 0px 20px #222
     text-align: center
@@ -374,6 +385,8 @@ article.post
       color: white
     &:hover
       width: 70px
+      @media screen and (max-width: 1250px)
+        width: 58px
   #scroll-left
     left: 0
   #scroll-right
@@ -385,10 +398,15 @@ article.post
     height: 270px
     text-decoration: none !important
     float: left
-    @media screen and (max-width: 1025px)
-      height: 180px
-    @media screen and (max-width: 500px)
-      width: 50%
+    @media screen and (max-width: 1450px)
+      width: 380px
+      height: 220px
+    @media screen and (max-width: 1250px)
+      width: 300px
+      height: 190px
+    @media screen and (max-width: 768px)
+      width: 180px
+      height: 110px
     .preview
       width: 100%
       height: 100%
@@ -413,6 +431,12 @@ article.post
         margin-top: 70px
         opacity: 1
         transition: all 0.3s ease-in-out
+        @media screen and (max-width: 1450px)
+          margin-top: 115px
+        @media screen and (max-width: 1250px)
+          margin-top: 145px
+        @media screen and (max-width: 768px)
+          display: none
         span
           display: block
           width: 100%
@@ -440,6 +464,12 @@ article.post
         p .fa
           margin-top: 40px
           opacity: 1
+          @media screen and (max-width: 1450px)
+            margin-top: 55px
+          @media screen and (max-width: 1250px)
+            margin-top: 35px
+          @media screen and (max-width: 768px)
+            margin-top: -5px
 
 #large-video
   width: 100%
@@ -452,10 +482,26 @@ article.post
     position: absolute
     z-index: 5000
     right: -20px
+    i
+      display: none
+    @media screen and (max-width: 768px)
+      i
+        display: block
+        color: white
+      img
+        display: none
+
   #facebook-share
     top: 50px
   #twitter-share
     top: 85px
+  @media screen and (max-width: 768px)
+    .video-share
+      top: 30px !important
+      &#facebook-share
+        left: 25px !important
+      &#twitter-share
+        left: 60px !important
   #target
     width: 58%
     height: 100%
@@ -464,16 +510,21 @@ article.post
     background-color: white
     box-shadow: 0px 0px 200px rgba(255, 255, 255, 0.5)
     display: block
-    transition: all 0.45s ease-out
+    transition: transform 0.45s ease-out, opacity 0.45s ease-out
+    -webkit-transition: -webkit-transform 0.45s ease-out, opacity 0.45s ease-out
     position: relative
     left: 0px
     &.out
-      left: -1000px
+      transform: translateX(-1000px)
+      -webkit-transform: translateX(-1000px)
       opacity: 0
     &.in
-      left: 1000px
+      transform: translateX(1000px)
+      -webkit-transform: translateX(1000px)
       transition: none !important
       opacity: 0
     #replacement  
       width: 100%
       height: 100%
+    @media screen and (max-width: 768px)
+      width: 100%

@@ -10,8 +10,8 @@
 
 <div id="large-video">
   <div id="target">
-    <a href="" id="facebook-share" class="video-share"><img src="<?php ilink('facebook.jpg'); ?>" /></a>
-    <a href="" id="twitter-share" class="video-share"><img src="<?php ilink('twitter.jpg'); ?>" /></a>
+    <a href="" id="facebook-share" class="video-share"><img src="<?php ilink('facebook.jpg'); ?>" /><i class="fa fa-3x fa-facebook"></i></a>
+    <a href="" id="twitter-share" class="video-share"><img src="<?php ilink('twitter.jpg'); ?>" /><i class="fa fa-3x fa-twitter"></i></a>
     <div id="replacement"></div>
   </div>
 </div>

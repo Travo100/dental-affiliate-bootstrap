@@ -13,7 +13,7 @@ jQuery(document).ready(function ( $ ) {
   $icons.add($mobileIcons).css('display', 'none');
 
   function adjustVideoHeight() {
-    $('#target, #large-video').height($('#target').width() * (9/16));
+    $('#large-video, #replacement, #target').height($('#target').width() * (9/16));
   }
   $(document).ready(adjustVideoHeight);
   $(window).resize(adjustVideoHeight);
@@ -59,7 +59,15 @@ jQuery(document).ready(function ( $ ) {
 
   (function() {
     var i;
-    var dscroll = 0, totalScroll = 0, tscroll = 0;
+    var dscroll = 0, totalScroll = 0, tscroll = 0, lastScroll = 0;
+    var mobileTransf = 0;
+
+    $(window).resize(function() {
+      if (totalScroll !== mobileTransf) {
+        totalScroll = mobileTransf;
+      $('.scroll-container').css('transform', 'translateX(-' + mobileTransf + 'px)');
+      }
+    });
 
     function update() {
       if (dscroll !== 0) { tscroll++; }
@@ -69,16 +77,32 @@ jQuery(document).ready(function ( $ ) {
       var rightBound = ($('.thumb').length * $('.thumb').width()) - $(window).width();
       if (totalScroll > rightBound) { totalScroll = rightBound; }
 
-      $('.scroll-container').css('margin-left', (-1 * totalScroll) + 'px');
+      if (lastScroll != totalScroll && $(window).width() > 768) {
+        lastScroll = totalScroll;
+        $('.scroll-container').css('transform', 'translateX(' + (-1 * totalScroll) + 'px)');
+      }
       requestAnimationFrame(update);
     };
     requestAnimationFrame(update);
 
     $('.scroll-control').hover(function() {
-      dscroll = Number($(this).attr('data-scroll'));
+      if ($(window).width() > 768) {
+        dscroll = Number($(this).attr('data-scroll'));
+      }
     }, function() {
       dscroll = 0;
       tscroll = 0;
+    });
+
+    $('.scroll-control').click(function() {
+      mobileTransf += Number($(this).attr('data-scroll')) * $('.thumb').width();
+      
+      if (mobileTransf < 0) { mobileTransf = 0; }
+
+      var rightBound = ($('.thumb').length * $('.thumb').width()) - $(window).width();
+      if (mobileTransf > rightBound) { mobileTransf = rightBound; }
+
+      $('.scroll-container').css('transform', 'translateX(-' + mobileTransf + 'px)');
     });
 
   })();
