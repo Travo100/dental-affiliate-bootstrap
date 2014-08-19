@@ -15,6 +15,7 @@ $header-font: "Oxygen", sans-serif;
 $body-font: "Open Sans", sans-serif;
 
 $primary-color: #00aaff;
+$secondary-color: #fff;
 
 body {
   padding: 50px 0 20px 0;
@@ -204,7 +205,7 @@ article.post {
 }
 
 /***************
- *SHORTCODE STYLES
+ *SHORTCODE STYLES 
  ***************** */
 #shortcode-ul {
   padding: 0;
@@ -376,7 +377,7 @@ article.post {
 /* Blog Styles */
 article.post {
   @media screen and (min-width: 1024px) {
-    height: 210px;
+    max-height: 210px;
     margin: 0px;
     background-color: rgba(0, 0, 0, 0.015);
     &:nth-of-type(even) {
@@ -384,18 +385,20 @@ article.post {
     }
   }
   .thumbnail-container {
-    background-color: lighten($primary-color, 55%);
-    text-align: center;
+    // background-color: $primary-color;
+    // text-align: center;
     padding: 0px;
     margin: 0px;
     height: 100%;
     padding-top: 10px;
+    text-align:center;
     @media screen and (max-width: 1024px) {
       background: none;
     }
   }
   .thumbnail {
-    width: 190px;
+    max-width: 190px;
+    width: 100%;
     height: 190px;
     overflow: hidden;
     max-height: 190px;
@@ -405,15 +408,17 @@ article.post {
     margin: 0px auto !important;
     padding: 0px;
     border-radius: 0px;
-    border: 5px solid lighten($primary-color, 60%);
+    border: 5px solid $secondary-color;
+    // display:inline-block;
+    // float:left;
     @media screen and (max-width: 1024px) {
       margin-top: 5px;
-      border: none;
+      // border: none;
     }
     a {
-      display: block;
+       
       margin: 0 auto;
-      text-align: center;
+      display:inline-block;
       width: 190px;
       height: 190px;
       background-size: cover;
@@ -426,12 +431,88 @@ article.post {
       text-decoration: none;
       font-family: "Open Sans", sans-serif;
       font-weight: 900;
-      font-size: 70px;
-      letter-spacing: -3px;
-      left: -4px;
-      position: relative;
-      bottom: -35px;
+      font-size: 48px;
+      display:inline-block;
+      margin: 51px 0 0 -14px;
+      @media (min-width: 991px) and (max-width: 1199px) {
+        margin: 51px 0 0 -37px;
+      }
+    }
+    
+  }
+    .action-button { float: right; }
+}
+
+#large-video {
+  width: 100%;
+  background-color: #090909;
+  margin-bottom: 0px;
+  overflow: hidden;
+  position: relative;
+  z-index: 50000;
+  .video-share {
+    position: absolute;
+    z-index: 5000;
+    right: -20px;
+    i {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      i {
+        display: block;
+        color: white;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+  #facebook-share {
+    top: 50px;
+  }
+  #twitter-share {
+    top: 85px;
+  }
+  @media screen and (max-width: 768px) {
+    .video-share {
+      top: 30px !important;
+      &#facebook-share {
+        left: 25px !important;
+      }
+      &#twitter-share {
+        left: 60px !important;
+      }
+    }
+  }
+  #target {
+    width: 58%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    background-color: white;
+    box-shadow: 0px 0px 200px rgba(255, 255, 255, 0.5);
+    display: block;
+    transition: transform 0.45s ease-out, opacity 0.45s ease-out;
+    -webkit-transition: -webkit-transform 0.45s ease-out, opacity 0.45s ease-out;
+    position: relative;
+    left: 0px;
+    &.out {
+      transform: translateX(-1000px);
+      -webkit-transform: translateX(-1000px);
+      opacity: 0;
+    }
+    &.in {
+      transform: translateX(1000px);
+      -webkit-transform: translateX(1000px);
+      transition: none !important;
+      opacity: 0;
+    }
+    #replacement {
+      width: 100%;
+      height: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
     }
   }
 }
-

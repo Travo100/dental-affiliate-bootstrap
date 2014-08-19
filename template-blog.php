@@ -58,9 +58,25 @@ get_header(); ?>
         </a>
     </div>
 <?php } ?>
-
+      <hr />
       <div class="posts-overview">
-      <?php $q = new WP_Query(array('post_type' => 'post')); if ($q->have_posts() ): while ( $q->have_posts() ) : $q->the_post(); ?> <!-- wordpress loop to display content -->
+      <?php
+// set the "paged" parameter (use 'page' if the query is on a static front page)
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+// the query
+$args = array( 'post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged );
+$the_query = new WP_Query( $args ); 
+?>
+
+<?php if ( $the_query->have_posts() ) : ?>
+
+<?php
+// the loop
+while ( $the_query->have_posts() ) : $the_query->the_post(); 
+?>
+
+
         
         <article class="post"> 
             <div class="col-md-3 thumbnail-container">
@@ -81,15 +97,35 @@ get_header(); ?>
             </em></p> <!-- get the authors name and date of post -->
         
           <?php the_excerpt(); ?>
+          <a href="<?php the_permalink(); ?>" class="action-button">Read more</a>
         </div>
         </article>
+        <div style="clear:both;"></div>
+        <hr />
+        
+        <?php endwhile; ?>
+        <div class="col-md-6"> 
+          <p class="prev"><?php next_posts_link( '<< Older Entries ', $the_query->max_num_pages ); ?></p>
+        </div>
+        <div class="col-md-6">
+          <p class="next" style="float:right;"><?php previous_posts_link( 'Newer Entries >>' ); ?></p>
+        </div>
+        
 
-        <?php endwhile; endif; ?>
+          <?php 
+          // clean up after the query and pagination
+          wp_reset_postdata(); 
+          ?>
+
+          <?php else:  ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+          <?php endif; ?>
+
         </div>
       </div> <!-- end of col-md-9 -->
-      <div class="col-md-3">
-        <?php get_sidebar(); ?>
-      </div>
+     
+        <?php get_sidebar( 'blog' ); ?>
+      
     </div>
   </div>
 </div>
