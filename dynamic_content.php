@@ -27,7 +27,7 @@ function dyn_content_page() {
         .content-cell .toggle { float: left; }
         .content-cell textarea { padding: 6px; font-size: 14px; outline: none !important; border: none !important; margin: 0; border-top: 1px dashed #888 !important; display: block; width: 100%; min-height: 120px; }
         input[type="submit"] { display: block; width: 75%; }
-    </style>';
+  </style><script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script><script>tinymce.init({selector:"textarea"});</script>';
     echo '<script>jQuery(document).ready(function() { jQuery(".group h2").click(function() { jQuery(this).find("~.content-cell").slideToggle(); }); });</script>';
     echo "<form method='post' id='dyn-content-form'>";
     echo "<div id='dyn-content-wrapper'>";
