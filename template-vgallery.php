@@ -29,11 +29,17 @@ foreach(get_vgallery_ids() as $id) {
 <div class="preview" data-vid="<?php echo get_post_meta($id, 'vid', true); ?>" style="background-image: url(http://img.youtube.com/vi/<?php echo get_post_meta($id, 'vid', true); ?>/0.jpg);">
       <div class="overlay"></div>
       <p><span><?php echo get_post_meta($id, 'video_name', true); ?></span><i class="fa fa-play fa-3x"></i></p>
+      <p class="desc"><?php echo get_post_meta($id, 'video_desc', true); ?></p>
     </div>
   </a>
 <?php
 } }
 ?>
 </div>
+</div>
+<div class="video-description">
+  <div class="container">
+    <p id="desc_target"></p>
+  </div>
 </div>
 <?php get_footer(); ?>

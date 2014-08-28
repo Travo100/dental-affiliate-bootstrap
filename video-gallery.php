@@ -36,9 +36,11 @@ function render_vgallery_menu_page() {
         ));
         if (isset($_POST['vid'])) { update_post_meta($id, 'vid', $_POST['vid']); }
         if (isset($_POST['video_name'])) { update_post_meta($id, 'video_name', $_POST['video_name']); }
+        if (isset($_POST['video_desc'])) { update_post_meta($id, 'video_desc', $_POST['video_desc']); }
         update_option('vgallery_order', get_option('vgallery_order') . ',' . $id);
       } else if ($_POST['action'] == 'update_post') {
         $id = $_POST['post_id'];
+        if (isset($_POST['video_desc'])) { update_post_meta($id, 'video_desc', $_POST['video_desc']); }
         if (isset($_POST['video_name'])) { update_post_meta($id, 'video_name', $_POST['video_name']); }
         if (isset($_POST['vid'])) { update_post_meta($id, 'vid', $_POST['vid']); }
       }
@@ -131,6 +133,11 @@ function render_vedit_field($post_id, $mode) {
         <div class="option_input option_text">
           <label for="embed">Video Id<br /><span style="font-size: 11px">(11 character ID)</span></label>
           <input style="width: 80%;" type="text" name="vid" value="<?php echo get_post_meta($post_id, 'vid', true); ?>">
+          <div class="clearfix"></div>
+        </div>
+        <div class="option_input option_textarea">
+          <label for="video_desc">Description</label>
+          <textarea style="width: 80%;" name="video_desc"><?php echo get_post_meta($post_id, 'video_desc', true); ?></textarea>
           <div class="clearfix"></div>
         </div>
       </div>

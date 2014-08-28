@@ -27,6 +27,9 @@ jQuery(document).ready(function ( $ ) {
         playerVars: {rel: 0}
     });
 
+    var desc = $('.thumb').first().find('.desc').html();
+    $('#desc_target').html(desc);
+
     function adjustSocialShares(vid) {
       $('#facebook-share').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutube.com/watch%3Fv%3D' + vid);
       $('#twitter-share').attr('href', 'http://www.twitter.com/share?&url=http%3A//www.youtube.com/watch%3Fv%3D' + vid);
@@ -35,13 +38,16 @@ jQuery(document).ready(function ( $ ) {
     adjustSocialShares(vid);
 
     $('.thumb').click(function() {
-      $('#target').attr('class', 'out');
+      $('#target, #desc_target').attr('class', 'out');
       var time = 450;
+      var desc = $(this).find('.desc').html();
+      console.log(desc);
       setTimeout(function() {
-        $('#target').attr('class', 'in');
+        $('#target, #desc_target').attr('class', 'in');
+        $('#desc_target').html(desc);
       }, time);
       setTimeout(function() {
-        $('#target').attr('class', '');
+        $('#target, #desc_target').attr('class', '');
       }, time * 2);
       var vid = $(this).find('.preview').attr('data-vid');
       player.loadVideoById(vid);

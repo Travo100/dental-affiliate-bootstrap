@@ -412,6 +412,8 @@ article.post .thumbnail {
       background-size: cover;
       background-position: center center;
       text-align: center; }
+      .thumbs .thumb .preview .desc {
+        display: none; }
       .thumbs .thumb .preview .overlay {
         width: 100%;
         height: 100%;
@@ -531,3 +533,25 @@ article.post .thumbnail {
     @media screen and (max-width: 768px) {
       #large-video #target {
         width: 100%; } }
+
+.video-description {
+  box-shadow: inset 0px 3px 14px rgba(0, 0, 0, 0.5);
+  background-color: #151515;
+  position: relative;
+  left: 0px; }
+  .video-description p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white; }
+  .video-description #desc_target {
+    transition: transform 0.45s ease-out, opacity 0.45s ease-out;
+    -webkit-transition: -webkit-transform 0.45s ease-out, opacity 0.45s ease-out; }
+    .video-description #desc_target.out {
+      transform: translateX(-1000px);
+      -webkit-transform: translateX(-1000px);
+      opacity: 0; }
+    .video-description #desc_target.in {
+      transform: translateX(1000px);
+      -webkit-transform: translateX(1000px);
+      transition: none !important;
+      opacity: 0; }
