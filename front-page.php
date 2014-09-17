@@ -1,6 +1,6 @@
-    <?php get_header(); ?>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <?php get_header(); ?> 
     <div class="jumbotron" style="background-image: url('<?php echo header_image(); ?>');">
+     
       <div class="container">
         <p class="phone-number"><i class="fa fa-phone fa-2x" style=" vertical-align:middle;"></i><?php echo get_option('shortname_phone_url'); ?><p>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
