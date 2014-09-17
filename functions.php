@@ -11,8 +11,7 @@ require_once dirname(__FILE__) . '/customizer.php'; // Theme Customization
 require_once dirname(__FILE__) . '/shortcodes.php'; // Custom Shortcodes
 require_once dirname(__FILE__) . '/theme_options.php'; // Custom Theme Options
 require_once dirname(__FILE__) . '/gallery.php'; // Custom Gallery Lightbox
-include_once( dirname( __FILE__ ) . '/kirki/kirki.php' );
-require_once dirname(__FILE__) . '/kirki-da.php'; //Kirki custom settings 
+require_once dirname(__FILE__) . '/video-gallery.php'; // Video Gallery
 
 register_dyn_content( array(
   "home" => array (
@@ -25,5 +24,4 @@ register_dyn_content( array(
   )
 ) );
 /* get_dyn_content("home", "title"); ?>  The getter function */
-
-
+?>

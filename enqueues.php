@@ -21,6 +21,7 @@ function theme_js() {
   $wp_scripts->add_data( 'respond_js', 'conditional', 'le IE 9' );
 
 
+  wp_enqueue_script('youtube-api', 'https://www.youtube.com/iframe_api');
   wp_enqueue_script( 'blue_imp', 'http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js', '', '', true );
   wp_enqueue_script ( 'retina_js', get_template_directory_uri() . '/js/retina.js', '', '', true );
   wp_enqueue_script ( 'fixtext_js', get_template_directory_uri() . '/js/jquery.fittext.js', '', '', true );
