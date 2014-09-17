@@ -6,10 +6,14 @@ get_header();
 ?>
 <div class="content">
   <div class="container">
-    <div class="col-md-12">
+    <div class="col-md-8">
       <?php
       if (have_posts()) {
-        while (have_posts()) {
+        while (have_posts()) { ?>
+          <div class="page-header">
+            <h1><?php the_title(); ?></h1>
+          </div>
+         <?php 
           the_post();
           the_content();
         }
@@ -87,9 +91,10 @@ get_header();
     ?>
     </div>
     </div>
+    <?php get_sidebar(); ?>
     </div>
   </div>
-</div>
+
 <div class="container content">
 </div>
 <?php get_footer(); ?>

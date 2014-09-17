@@ -99,8 +99,24 @@ p {
   margin: -37px 9px 0;
   float: right;
   a {
-    padding-left: 10px;
+    padding-left: 15px;
+    font-size: 1.75em;
+
   }
+}
+
+#menu-button {
+  text-align: center;
+  display: block;
+  font-size: 13px;
+  color:#fff;
+}
+ 
+.navbar-toggle .icon-bar {
+display: block;
+width: 32px;
+height: 2px;
+border-radius: 1px;
 }
 
 /******************
