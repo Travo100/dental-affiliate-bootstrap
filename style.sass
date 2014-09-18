@@ -1,0 +1,554 @@
+/*
+ *Theme Name: Dental Affiliate Bootstrap
+ *Theme URI: http://dentalaffiliate.com/
+ *Author: Travis Thompson, Matthew Roelle
+ *Author URI: http://dentalaffiliate.com/
+ *Description: The Dental Affilate Bootstrap theme is meant to be built upon as a framework.
+ *Version: 1.0
+ *License: GNU General Public License v2 or later
+ *License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *Tags: frontend framework
+ *
+ *This theme, like WordPress, is licensed under the GPL.
+ *Use it to make something cool, have fun, and share what you've learned with others.
+
+$header-font: "Oxygen", sans-serif
+$body-font: "Open Sans", sans-serif
+
+$primary-color: #0af
+
+body
+  padding: 50px 0 20px 0
+  overflow-x: hidden
+
+.admin-bar .navbar-fixed-top
+  margin-top: 30px
+  /*Makes the admin bar in wordpress viewable along with the nav-bar
+
+img
+  max-width: 100%
+  /*This code makes all images responsive to screen size and into block elements
+  height: auto
+  display: inline-block
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Oxygen', sans-serif
+
+p, em, cite, li, q, a
+  font-family: 'Open Sans', sans-serif
+
+p
+  font-size: 1em
+  //base size of bootstrap is 14px
+
+.section-title
+  font-family: $header-font
+  line-height: 2em
+
+/*******************
+ *HEADER STYLES
+ ********************
+@media (min-width: 768px)
+  .sub-menu
+    display: none
+    position: absolute
+    background: #222
+    padding: 10px 15px
+    width: 200px
+  li:hover .sub-menu
+    display: block
+
+.sub-menu
+  li
+    margin-bottom: 10px
+    list-style: none
+    &:last-child
+      margin-bottom: 0
+  a
+    color: #999
+    text-decoration: none
+    &:hover
+      color: #fff
+
+.current-menu-parent
+  li a
+    background: inherit
+  .current-menu-item a
+    color: #fff
+    font-weight: bold
+
+.mobile-buttons
+  margin: -37px 9px 0
+  float: right
+  a
+    padding-left: 10px
+
+/*******************
+ *FOOTER STYLES
+ ********************
+footer
+  margin-top: 15px
+
+.footer-nav
+  float: left
+  padding: 0
+  li
+    list-style: none
+
+/****************
+ *SIDEBAR STYLES
+ *****************
+
+.sidebar
+  margin-top: 40px
+
+.widget
+  margin: 10px 0 30px
+
+/****************
+ *SIDEBAR STYLES
+ *****************
+
+article.post
+  margin: 20px 0 40px
+
+/****************
+ *PORTFOLIO STYLES
+ *****************
+
+.col-xs-3.portfolio-piece
+  width: 100%
+
+.portfolio-piece h4
+  font-size: .8em
+
+.prev-next
+  font-size: 1.25em
+  margin-top: 30px
+  text-align: right
+
+/****************
+ *FRONTPAGE STYLES
+ *****************
+
+.phone-number
+  float: right
+
+.social-icons
+  a
+    padding-right: 10px
+    &:last-child
+      padding-right: 0
+
+/****************
+ *GALLERY STYLES
+ *****************
+
+#blueimp-gallery .modal-body.next img
+  max-width: 85%
+  margin: 0 auto
+  height: auto
+
+#links img
+  float: left
+  width: 100%
+  margin: 2% 0
+  @media (min-width: 425px)
+    max-width: 200px
+    margin: 2%
+
+/****************
+ *JUMBOTRON STYLES
+ *****************
+.jumbotron
+  background-position: center center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+/****************
+ *SHORTCODE STYLES 
+ *****************
+#shortcode-ul
+  padding: 0
+  li
+    list-style-type: none
+    padding-top: 5px
+  img
+    float: left
+    margin-right: 10px
+
+.list-posts
+  margin: 25px 0
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+@media screen and (max-width: 767px)
+  .row-offcanvas
+    position: relative
+    -webkit-transition: all .25s ease-out
+    -moz-transition: all .25s ease-out
+    transition: all .25s ease-out
+  .row-offcanvas-right
+    right: 0
+  .row-offcanvas-left
+    left: 0
+  .row-offcanvas-right .sidebar-offcanvas
+    right: -50%
+    /* 6 columns
+  .row-offcanvas-left .sidebar-offcanvas
+    left: -50%
+    /* 6 columns
+  .row-offcanvas-right.active
+    right: 50%
+    /* 6 columns
+  .row-offcanvas-left.active
+    left: 50%
+    /* 6 columns
+  .sidebar-offcanvas
+    position: absolute
+    top: 0
+    width: 50%
+    /* 6 columns
+
+.woocomm-setup
+  width: 1200px
+  margin: 0 auto
+
+@media screen and (min-width: 768px)
+  .mobile-buttons
+    display: none
+
+@media screen and (min-width: 575px)
+  .prev-next
+    margin-top: 30px
+    font-size: 1.5em
+  .social-icons
+    float: right
+
+@media screen and (min-width: 400px)
+  .col-xs-3.portfolio-piece
+    width: 25%
+  .footer-nav
+    float: right
+    li
+      float: left
+      padding-right: 10px
+      list-style: none
+
+@media screen and (min-width: 300px)
+  .mobile-buttons
+    margin: 15px 10px 0
+
+.nocomments
+  display: none
+
+/* Gallery Styles
+.case-study
+  width: 32%
+  display: inline-block
+  margin: 1.5%
+  background-color: rgba(255, 255, 255, 0.55)
+  padding: 10px
+  box-sizing: border-box
+  min-height: 325px
+  border: 4px solid rgba(70, 70, 70, 0.1)
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.35)
+  min-height: 470px
+  float: left
+  hr
+    width: 95%
+    margin: 10px auto 10px auto
+    border: none
+    height: 3px
+    background-color: rgba(0, 0, 0, 0.25)
+  @media screen and (max-width: 600px)
+    float: none
+    width: 100%
+  @media screen and (max-width: 1450px)
+    width: 47%
+  .pt-name
+    color: black
+    font-size: 20px
+    line-height: 1.5em
+    margin: 0px
+  .proc-name
+    font-style: italic
+    font-size: 15px
+    line-height: 1.3em
+    margin: 0px
+    margin-bottom: 15px
+  .pt-notes
+    font-size: 14px
+  [data-gallery] img
+    border: 2px solid #999999
+    width: 100%
+    height: auto
+    max-width: 100% !important
+  label
+    color: black
+    display: block
+    margin: 0px
+    padding: 0px
+    text-align: center
+  .full-face
+    height: 286px
+    width: 100%
+    background-position: center center
+    background-size: cover
+    margin-bottom: 10px
+    border: 2px solid #999999
+
+/* Blog Styles
+article.post
+  @media screen and (min-width: 1024px)
+    height: 210px
+    margin: 0px
+    background-color: rgba(0, 0, 0, 0.015)
+    &:nth-of-type(even)
+      background-color: rgba(0, 0, 0, 0.04)
+  .thumbnail-container
+    background-color: lighten($primary-color, 55%)
+    text-align: center
+    padding: 0px
+    margin: 0px
+    height: 100%
+    padding-top: 10px
+    @media screen and (max-width: 1024px)
+      background: none
+  .thumbnail
+    width: 190px
+    height: 190px
+    overflow: hidden
+    max-height: 190px
+    text-align: center
+    border: none
+    background: none
+    margin: 0px auto !important
+    padding: 0px
+    border-radius: 0px
+    border: 5px solid lighten($primary-color, 60%)
+    @media screen and (max-width: 1024px)
+      margin-top: 5px
+      border: none
+    a
+      display: block
+      margin: 0 auto
+      text-align: center
+      width: 190px
+      height: 190px
+      background-size: cover
+      background-position: center center
+      background-color: white
+      text-decoration: none !important
+    .date
+      color: #454545
+      text-decoration: none
+      font-family: 'Open Sans', sans-serif
+      font-weight: 900
+      font-size: 70px
+      letter-spacing: -3px
+      left: -4px
+      position: relative
+      bottom: -35px
+
+.thumbs
+  width: 100%
+  overflow-x: hidden
+  .scroll-container
+    @media screen and (max-width: 768px)
+      transition: transform 0.3s ease-in-out
+      -webkit-transition: -webkit-transform 0.3s ease-in-out
+  .scroll-control
+    height: 270px
+    width: 45px
+    z-index: 100000
+    @media screen and (max-width: 1450px)
+      height: 220px
+    @media screen and (max-width: 1250px)
+      height: 190px
+      width: 35px
+    @media screen and (max-width: 768px)
+      height: 110px
+    display: block
+    position: absolute
+    background-color: #222
+    box-shadow: 0px 0px 20px #222
+    text-align: center
+    transition: all 0.2s ease-out
+    .fa
+      position: relative
+      bottom: -40%
+      font-size: 36px
+      color: white
+    &:hover
+      width: 70px
+      @media screen and (max-width: 1250px)
+        width: 58px
+  #scroll-left
+    left: 0
+  #scroll-right
+    right: 0
+  .thumb
+    display: inline-block
+    width: 480px
+    margin: 0px
+    height: 270px
+    text-decoration: none !important
+    float: left
+    @media screen and (max-width: 1450px)
+      width: 380px
+      height: 220px
+    @media screen and (max-width: 1250px)
+      width: 300px
+      height: 190px
+    @media screen and (max-width: 768px)
+      width: 180px
+      height: 110px
+    .preview
+      width: 100%
+      height: 100%
+      background-size: cover
+      background-position: center center
+      text-align: center
+      .desc
+        display: none
+      .overlay
+        width: 100%
+        height: 100%
+        background-color: black
+        position: relative
+        margin-bottom: -340px
+        z-index: 500
+        opacity: 0
+        transition: all 0.3s ease-in-out
+      p
+        z-index: 1000
+        position: relative
+        color: white
+        font-family: 'Open Sans', sans-serif
+        font-size: 14px
+        margin-top: 70px
+        opacity: 1
+        transition: all 0.3s ease-in-out
+        @media screen and (max-width: 1450px)
+          margin-top: 115px
+        @media screen and (max-width: 1250px)
+          margin-top: 145px
+        @media screen and (max-width: 768px)
+          display: none
+        span
+          display: block
+          width: 100%
+          background-color: rgba(0, 0, 0, 0.75)
+          color: white
+          font-weight: 900
+          padding-top: 10px
+          padding-bottom: 10px
+          position: relative
+        .fa
+          display: block
+          width: 70px
+          height: 70px
+          border-radius: 100%
+          margin: 20px auto
+          border: 4px solid white
+          padding: 18px
+          padding-top: 10px
+          opacity: 0
+          transition: all 0.3s ease-in-out
+      &:hover
+        .overlay
+          opacity: 0.75
+          
+        p .fa
+          margin-top: 40px
+          opacity: 1
+          @media screen and (max-width: 1450px)
+            margin-top: 55px
+          @media screen and (max-width: 1250px)
+            margin-top: 35px
+          @media screen and (max-width: 768px)
+            margin-top: -5px
+
+#large-video
+  width: 100%
+  background-color: #090909
+  margin-bottom: 0px
+  overflow: hidden
+  position: relative
+  z-index: 50000
+  .video-share
+    position: absolute
+    z-index: 5000
+    right: -20px
+    i
+      display: none
+    @media screen and (max-width: 768px)
+      i
+        display: block
+        color: white
+      img
+        display: none
+
+  #facebook-share
+    top: 50px
+  #twitter-share
+    top: 85px
+  @media screen and (max-width: 768px)
+    .video-share
+      top: 30px !important
+      &#facebook-share
+        left: 25px !important
+      &#twitter-share
+        left: 60px !important
+  #target
+    width: 58%
+    height: 100%
+    margin: 0px auto
+    padding: 0px
+    background-color: white
+    box-shadow: 0px 0px 200px rgba(255, 255, 255, 0.5)
+    display: block
+    transition: transform 0.45s ease-out, opacity 0.45s ease-out
+    -webkit-transition: -webkit-transform 0.45s ease-out, opacity 0.45s ease-out
+    position: relative
+    left: 0px
+    &.out
+      transform: translateX(-1000px)
+      -webkit-transform: translateX(-1000px)
+      opacity: 0
+    &.in
+      transform: translateX(1000px)
+      -webkit-transform: translateX(1000px)
+      transition: none !important
+      opacity: 0
+    #replacement  
+      width: 100%
+      height: 100%
+    @media screen and (max-width: 768px)
+      width: 100%
+
+.video-description
+  box-shadow: inset 0px 3px 14px rgba(0, 0, 0, 0.5)
+  background-color: #151515
+  position: relative
+  left: 0px
+  p
+    padding-top: 20px
+    padding-bottom: 20px
+    color: white
+  #desc_target
+    transition: transform 0.45s ease-out, opacity 0.45s ease-out
+    -webkit-transition: -webkit-transform 0.45s ease-out, opacity 0.45s ease-out
+    &.out
+      transform: translateX(-1000px)
+      -webkit-transform: translateX(-1000px)
+      opacity: 0
+    &.in
+      transform: translateX(1000px)
+      -webkit-transform: translateX(1000px)
+      transition: none !important
+      opacity: 0
