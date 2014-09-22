@@ -7,8 +7,8 @@ jQuery(document).ready(function ( $ ) {
 
 
   //does not display social icons if the field is left blank
-  $icons = $( '.social-icons a[href=]' );
-  $mobileIcons = $( '.mobile-buttons a[href=]' );
+  $icons = $( '.social-icons a[href=""]' );
+  $mobileIcons = $( '.mobile-buttons a[href=""]' );
 
   $icons.add($mobileIcons).css('display', 'none');
 
@@ -112,6 +112,11 @@ jQuery(document).ready(function ( $ ) {
     });
 
   })();
+
+  setTimeout(function() {
+    $('.pop-up-box').addClass('in');
+  }, 2500);
+
 });
 
 //This is for the fittext.js plugin, modify it how you would like!

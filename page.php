@@ -18,6 +18,10 @@
       
       <?php comments_template(); ?>
 
+    <?php if (get_post_meta(get_the_ID(), 'popup_enabled', true)) { ?>
+      <div class="pop-up-box"><?php echo get_post_meta(get_the_ID(), 'popup_box_content', true); ?></div>
+    <?php } ?>
+    </div>
     <?php endwhile; else: ?>
       
       <div class="page-header">
