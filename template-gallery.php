@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="content">
   <div class="container">
-    <div class="col-md-8">
+    <div class="col-md-7">
       <?php
       if (have_posts()) {
         while (have_posts()) { ?>

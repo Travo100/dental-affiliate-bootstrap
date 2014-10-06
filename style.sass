@@ -16,6 +16,7 @@ $header-font: "Oxygen", sans-serif
 $body-font: "Open Sans", sans-serif
 
 $primary-color: #0af
+$secondary-color: #444
 
 body
   padding: 50px 0 20px 0
@@ -23,19 +24,19 @@ body
 
 .admin-bar .navbar-fixed-top
   margin-top: 30px
-  /*Makes the admin bar in wordpress viewable along with the nav-bar
+  
 
 img
   max-width: 100%
-  /*This code makes all images responsive to screen size and into block elements
+  
   height: auto
   display: inline-block
 
 h1, h2, h3, h4, h5, h6
-  font-family: 'Oxygen', sans-serif
+  font-family: $header-font
 
 p, em, cite, li, q, a
-  font-family: 'Open Sans', sans-serif
+  font-family: $body-font
 
 p
   font-size: 1em
@@ -182,9 +183,7 @@ article.post
 .list-posts
   margin: 25px 0
 
-/*
- * Off Canvas
- * --------------------------------------------------
+//Off Canvas
 @media screen and (max-width: 767px)
   .row-offcanvas
     position: relative
@@ -197,21 +196,21 @@ article.post
     left: 0
   .row-offcanvas-right .sidebar-offcanvas
     right: -50%
-    /* 6 columns
+    // 6 columns
   .row-offcanvas-left .sidebar-offcanvas
     left: -50%
-    /* 6 columns
+    // 6 columns
   .row-offcanvas-right.active
     right: 50%
-    /* 6 columns
+    // 6 columns
   .row-offcanvas-left.active
     left: 50%
-    /* 6 columns
+    // 6 columns
   .sidebar-offcanvas
     position: absolute
     top: 0
     width: 50%
-    /* 6 columns
+    // 6 columns
 
 .woocomm-setup
   width: 1200px

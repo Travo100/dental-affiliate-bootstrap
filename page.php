@@ -4,7 +4,7 @@
 
   <div class="row row-offcanvas row-offcanvas-right">
     
-    <div class="col-md-9"> <!-- make a 9 col area for the content -->
+    <div class="col-md-7"> <!-- make a 9 col area for the content -->
     
     <?php if (have_posts() ): while ( have_posts() ) : the_post(); ?> <!-- wordpress loop to display content -->
       
@@ -22,7 +22,7 @@
     <?php if (get_post_meta(get_the_ID(), 'popup_enabled', true)) { ?>
       <div class="pop-up-box"><?php echo get_post_meta(get_the_ID(), 'popup_box_content', true); ?></div>
     <?php } ?>
-    </div>
+    
 
     <?php endwhile; else: ?>
       
