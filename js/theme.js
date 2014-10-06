@@ -112,6 +112,11 @@ jQuery(document).ready(function ( $ ) {
     });
 
   })();
+
+  setTimeout(function() {
+    $('.pop-up-box').addClass('in');
+  }, 2500);
+
 });
 
 //This is for the fittext.js plugin, modify it how you would like!
