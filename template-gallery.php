@@ -77,7 +77,7 @@ get_header();
           </div>
         <?php } else { ?>
           <div class="col-md-6">
-            <a data-gallery href="<?php echo $before_src; ?>>"><img src="<?php echo $before_src; ?>" /><label>Before</label></a>
+            <a data-gallery href="<?php echo $before_src; ?>"><img src="<?php echo $before_src; ?>" /><label>Before</label></a>
           </div>
           <div class="col-md-6">
             <a data-gallery href="<?php echo $after_src; ?>"><img src="<?php echo $after_src; ?>" /><label>After</label></a>

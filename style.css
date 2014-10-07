@@ -158,7 +158,7 @@ article.post {
  ***************** */
 #blueimp-gallery .modal-body.next img {
   max-width: 85%;
-  margin: 0 auto;
+  margin: 15% auto;
   height: auto;
 }
 
@@ -287,7 +287,7 @@ article.post {
 
 /* Gallery Styles */
 .case-study {
-  width: 32%;
+  width: 100%;
   display: inline-block;
   margin: 1.5%;
   background-color: rgba(255, 255, 255, 0.55);
@@ -306,14 +306,9 @@ article.post {
   height: 3px;
   background-color: rgba(0, 0, 0, 0.25);
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .case-study {
-    float: none;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 1450px) {
-  .case-study {
+    float: left;
     width: 47%;
   }
 }
