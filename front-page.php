@@ -10,12 +10,12 @@
       <?php endwhile; endif; ?>
         <!-- these are social media buttons for themes, you can hardcode them if -->
         <div class="social-icons">
-          <a href="<?php echo get_option('shortname_facebook_url'); ?>"><i class="fa fa-facebook fa-3x"></i></a>
-          <a href="<?php echo get_option('shortname_twitter_url'); ?>"><i class="fa fa-twitter fa-3x"></i></a>
-          <a href="<?php echo get_option('shortname_linkedin_url'); ?>"><i class="fa fa-linkedin fa-3x"></i></a>
-          <a href="<?php echo get_option('shortname_googleplus_url'); ?>"><i class="fa fa-google fa-3x"></i></a>
-          <a href="<?php echo get_option('shortname_pinterest_url'); ?>"><i class="fa fa-pinterest fa-3x"></i></a>
-          <a href="<?php echo get_option('shortname_youtube_url'); ?>"><i class="fa fa-youtube fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_facebook_url'); ?>" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_twitter_url'); ?>" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_linkedin_url'); ?>" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_googleplus_url'); ?>" target="_blank"><i class="fa fa-google fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_pinterest_url'); ?>" target="_blank"><i class="fa fa-pinterest fa-3x"></i></a>
+          <a href="<?php echo get_option('shortname_youtube_url'); ?>" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>
         </div>
       
       </div>
