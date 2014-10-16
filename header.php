@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.ico">
 
-    <title>
-      <?php wp_title( '|', true, 'right' ); ?>
-      <?php bloginfo( 'name' ); ?>
-    </title>
+    <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
 
     <?php wp_head(); ?>
-    <?php echo get_option('shortname_googleanalytics_code'); ?>
+    <?php echo stripslashes(get_option('shortname_googleanalytics_code')); ?>
   </head>
 
   <body <?php body_class(); ?>>
