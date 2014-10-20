@@ -180,7 +180,7 @@ function theme_settings_page() {
         <ul>
             <li>View Documentation |</li>
             <li>Visit Support |</li>
-            <li>Theme version 1.0 </li>
+            <li>Theme version 1.1 - Last Updated 10/20/2014</li>
         </ul>
         <div class="content_options">
             <form method="post">
