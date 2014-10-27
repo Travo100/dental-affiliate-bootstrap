@@ -29,3 +29,6 @@ Creating a page with sections:
 3. To style the page you just created look up its page ID by viewing the source or using the web inspector tool.
 4. You can see the page id in the body class Ex."page-id-23"
 5. Go into your CSS file and simply called .page-id-23 and style how you would like. 
+
+v0.2 - 10.27.2014
+- Go to http://realfavicongenerator.net to generate favicons, and drop them all into the favicon folder
