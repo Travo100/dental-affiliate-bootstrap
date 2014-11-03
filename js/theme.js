@@ -5,6 +5,11 @@ jQuery(document).ready(function ( $ ) {
     $('.row-offcanvas').toggleClass('active');
   });
 
+  //Turns off youtube videos when modal window closes 
+  $('.modal').on('hidden.bs.modal', function(e) {
+    $iframe = $(this).find('iframe');
+    $iframe.attr('src', $iframe.attr('src'));
+  });
 
   //does not display social icons if the field is left blank
   $icons = $( '.social-icons a[href=""]' );
