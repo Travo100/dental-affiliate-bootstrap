@@ -24,7 +24,7 @@ function render_gallery_menu_page() {
     if (isset($_POST['remove_post'])) {
       echo '<h1>Deleted</h1>';
       $order = array_map(intval, explode(',', get_option('gallery_order')));
-      unset($order[array_search($post_id, $order)]);
+      array_slice($order, array_search($post_id, $order), -1);
       update_option('gallery_order', implode(',', $order));
       wp_delete_post(intval($_POST['post_id']));
     } else {
